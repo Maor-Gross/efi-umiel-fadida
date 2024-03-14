@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-image: url(./images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+}
+
+.cover {
+    width: 100%;
+    height: 250px;
+    border-bottom: 3px solid #EF332E;
+}
+
+@keyframes slide {
+    from {
+        transform: translatex(-150%);
+    }
+
+    to {
+        transform: translatex(0);
+    }
+}
+
+.profile {
+
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    inset: 0;
+    margin: 125px auto;
+    border: 3px solid #EF332E;
+    animation: slide 3s ease;
+}
+
+section {
+    margin-top: 125px;
+
+}
+
+section>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+@font-face {
+    font-family: "Heebo-Black";
+    src: url(./Heebo/static/Heebo-Black.ttf);
+}
+
+section>div>h1 {
+    font-family: "Heebo-Black";
+    text-align: center;
+    font-size: 2.5em;
+}
+
+@font-face {
+    font-family: "Heebo-Regular";
+    src: url(./Heebo/static/Heebo-Regular.ttf);
+}
+
+section h2 {
+    font-family: "Heebo-Regular";
+    text-align: center;
+    font-size: 1.5em;
+    direction: rtl;
+}
+
+.social_media {
+    width: 97.5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.social_media>a {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #EF332E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social_media>a>img {
+    width: 50px;
+    height: 50px;
+}
+
+.map {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.QR {
+    width: 85%;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #EF332E;
+
+}
+
+footer>h2 {
+    font-family: "Heebo-Black";
+    direction: rtl;
+    color: white;
+    margin: 0 15px;
+    font-size: 1em;
+}
+
+footer>img {
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (min-width:1000px) {
+    .cover {
+        width: 100%;
+        height: 550px;
+        border-bottom: 3px solid #EF332E;
+    }
+
+    .profile {
+        margin: 425px auto;
+        border: 3px solid #EF332E;
+    }
+
+    .map {
+        width: 1000px;
+        height: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .map>iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .QR {
+        width: 1000px;
+        height: 1000px;
+    }
+}
